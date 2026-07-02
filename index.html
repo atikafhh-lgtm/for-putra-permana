@@ -3,74 +3,215 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Untuk Putra ❤️</title>
+
+<title>Happy Birthday ❤️</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(#ffd6e7,#fff);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+background:linear-gradient(135deg,#ffd6e7,#ffeef5);
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+overflow:hidden;
 }
 
 .card{
-    background:white;
-    width:90%;
-    max-width:500px;
-    padding:30px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 0 20px rgba(0,0,0,.15);
+background:white;
+width:90%;
+max-width:450px;
+padding:35px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+animation:fade .8s;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.envelope{
+font-size:120px;
+cursor:pointer;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-10px);
+}
 }
 
 h1{
-    color:#ff4d88;
+color:#ff4d88;
+margin-bottom:20px;
 }
 
 p{
-    font-size:18px;
-    line-height:1.6;
+font-size:20px;
+line-height:1.8;
+color:#444;
 }
 
 button{
-    margin-top:20px;
-    background:#ff4d88;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:50px;
-    font-size:18px;
-    cursor:pointer;
+margin-top:30px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+background:#ff4d88;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
 }
 
 button:hover{
-    background:#ff2f70;
+background:#ff2f70;
+transform:scale(1.05);
 }
+
 </style>
 </head>
 
 <body>
 
-<div class="card">
-<h1>Hai ayang ❤️</h1>
+<div class="card" id="content">
+
+<div class="envelope" onclick="nextPage()">
+💌
+</div>
+
+<h2>Tap me please ❤️</h2>
+
+</div>
+
+<script>
+
+let page=0;
+
+function nextPage(){
+
+page++;
+
+if(page==1){
+
+document.getElementById("content").innerHTML=`
+<h1>For You ❤️</h1>
 
 <p>
-happy birth day ayang wish u all the best.
+Aku punya sesuatu buat seseorang yang lagi ulang tahun...
 </p>
 
+<button onclick="nextPage()">
+Next →
+</button>
+`;
+
+}
+
+else if(page==2){
+
+document.getElementById("content").innerHTML=`
+<h1>Happy Birthday Ayang 🎂</h1>
+
 <p>
-Terima kasih sudah hadir di hidupku.
-Aku punya sesuatu buat kamu lihat.
+Happy 23 Years!! ❤️<br><br>
+
+ 😘
+</p>
+
+<button onclick="nextPage()">
+Next →
+</button>
+`;
+
+}
+
+else if(page==3){
+
+document.getElementById("content").innerHTML=`
+<h1>✨</h1>
+
+<p>
+Semoga doa yang diam-diam kamu doakan,
+pelan-pelan bisa terwujud.
+<br><br>
+
+Semoga semua yang kamu usahakan dipermudah,
+selalu sehat,dan dikelilingi hal-hal baik.
+🤍
+</p>
+
+<button onclick="nextPage()">
+Next →
+</button>
+`;
+
+}
+
+else if(page==4){
+
+document.getElementById("content").innerHTML=`
+<h1>The Last One 🎁</h1>
+
+<p>
+i have a little gift this for you ❤️
 </p>
 
 <button onclick="window.location.href='https://drive.google.com/file/d/197Ie_BPwuKSPdTT6yiG_BIKlTdPRKHcg/view?usp=drivesdk'">
-Buka Pesanku ❤️
+Buka Hadiahnya 🎥
 </button>
 
-</div>
+<br><br>
+
+<button onclick="nextPage()">
+Sudah Lihat →
+</button>
+`;
+
+}
+
+else if(page==5){
+
+document.getElementById("content").innerHTML=`
+<h1>Thank You for watching ❤️</h1>
+
+<p>
+and thank you for loving me.
+<br><br>
+
+Semoga hari ini dan seterusnya selalu happy ya.
+<br><br>
+
+Happy Birthday Ayang 😍🎂
+</p>
+
+`;
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
